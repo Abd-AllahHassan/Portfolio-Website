@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .menu-icon {
+        display: none;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+        .navbar {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #051129;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            z-index: 100;
+        }
+        .navbar a {
+            margin: 10px 0;
+        }
+        .menu-icon {
+            display: block;
+            margin-left: 390px;
+        }
+    }
+    /* Responsive Navigation */
+.nav {
+    height: var(--header-height);
+}
+
+.nav__logo, 
+.nav__burger, 
+.nav__close {
+    color: var(--white-color);
+}
+
+.nav__data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__logo i {
+    font-weight: initial;
+    font-size: 1.25rem;
+}
+
+.nav__toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav__burger, 
+.nav__close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+}
+
+.nav__close {
+    opacity: 0;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+    .nav__menu {
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: top .4s, opacity .3s;
+    }
+    .nav__menu::-webkit-scrollbar {
+        width: 0;
+    }
+    .nav__list {
+        background-color: var(--black-color);
+        padding-top: 1rem;
+    }
+}
+
+.nav__link {
+    color: var(--white-color);
+    background-color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color .3s;
+}
+
+.nav__link:hover {
+    background-color: var(--black-color-lighten);
+}
+
+.nav__menu.show-menu {
+    top: 3.5rem;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav__toggle.show-icon .nav__burger {
+    transform: rotate(180deg);
+    opacity: 0;
+}
+
+.nav__toggle.show-icon .nav__close {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c44dbc2ee4.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('secret'); 
+            })();
+        </script>
+    </head>
+<body>
+    <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <nav class="navbar" id="navbar">
+        <a href="#home" style="--i:1">Home</a>
+        <a href="#about" style="--i:2">About</a>
+        <a href="#services" style="--i:3">Services</a>
+        <a href="#skills" style="--i:4">Skills</a>
+        <a href="#portfolio" style="--i:5">Portfolio</a>
+        <a href="#contact" style="--i:6">Contact</a>
+    </nav>
+    <div class="menu-icon" id="menu-icon">
+        <i class="ri-menu-line"></i>
+    </div>
+</header>
+    
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me </h3>
+            <h1>Abdullah Hassan.</h1>
+            <h3>And I'm a  <span class="text"></span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <br>Dolor ipsam dolore voluptas eligendi dolorum .</p>
+            <div class="home-sic">
+                <a href="https://www.facebook.com/profile.php?id=100049940130825" style="--i:6"><i class="fa-brands fa-facebook-f fa-beat-fade"></i></a>
+                <a href="https://www.instagram.com/ab_2_5_4/" style="--i:7"><i class="fa-brands fa-instagram fa-beat-fade"></i></a>
+                <a href="#" style="--i:8"><i class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+                <a href="#" style="--i:9"><i class="fa-brands fa-twitter fa-beat-fade"></i></a>
+            </div>
+            <a href="#" class="btn">More About Me</a>
+        </div>
+        <div class="home-img">
+            <img src="images/user.png" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/user.png" alt="">
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4>Full Stack Developer</h4>
+            <p>Hello! I'm Abdullah, a passionate web developer with expertise in HTML, CSS, JavaScript, and the MERN stack. I enjoy creating dynamic and responsive web applications that provide a seamless user experience.</p>
+            <p>With a strong background in front-end and back-end development, I have worked on various projects, ranging from small personal websites to large-scale applications. My goal is to constantly improve my skills and stay updated with the latest technologies in the web development world.</p>
+            <p>When I'm not coding, I enjoy exploring new programming languages, contributing to open-source projects, and sharing my knowledge through my platform for lessons. I'm always excited to take on new challenges and collaborate with others to build innovative solutions.</p>
+            <a href="#" class="btn">More About Me</a>
+        </div>
+    </section>
+    
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My <span>Services</span></h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code fa-beat" style="color: #00eeff;"></i>
+                        <h2>FrontEnd dev</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora nam magni autem eos! Mollitia, possimus commodi dolor exercitationem sapiente placeat fuga pariatur eligendi harum!</p>
+                        <a href="#" class="read">Read More</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop-simple fa-beat" style="color: #00eeff;"></i>
+                        <h2>FrontEnd dev</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora nam magni autem eos! Mollitia, possimus commodi dolor exercitationem sapiente placeat fuga pariatur eligendi harum!</p>
+                        <a href="#" class="read">Read More</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store fa-beat" style="color: #00eeff;"></i>
+                        <h2>FrontEnd dev</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora nam magni autem eos! Mollitia, possimus commodi dolor exercitationem sapiente placeat fuga pariatur eligendi harum!</p>
+                        <a href="#" class="read">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="sub-title">My <span>Skills</span></h1>
+    <section class="skils-sec">
+        <div class="container1" id="skills">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="Technical-bars">
+                <div class="bar"><i style="color: #c95d2e;" class="fa-brands fa-html5"></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: #147bbc;" class="fa-brands fa-css3-alt"></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: #b0bc1e;" class="fa-brands fa-square-js"></i>
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: #c32ec9;" class="fa-brands fa-python"></i>
+                    <div class="info">
+                        <span>python</span>
+                    </div>
+                    <div class="progress-line python">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: #69bcbc;" class="fa-brands fa-php"></i>
+                    <div class="info">
+                        <span>php</span>
+                    </div>
+                    <div class="progress-line react">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container1">
+            <h1 class="heading1">Professional Skills</h1>
+            <div class="radial-bars">
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="test">Creativity</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="test">Communication</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">75%</div>
+                <div class="test">Problem Solving</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="test">Teamwork</div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="portfolio" id="project">
+            <div class="main-text">
+                <h2>Latest <span>Project</span></h2>
+
+                <div class="portfolio-content">
+                    <div class="row">
+                        <img src="images/work-1.png" alt="">
+                        <div class="layer">
+                            <h5>FrontEnd dev</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id atque in tempora excepturi eaque quaerat quisquam accusantium provident molestias?</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square fa-beat"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="images/work-2.png" alt="">
+                        <div class="layer">
+                            <h5>FrontEnd dev</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id atque in tempora excepturi eaque quaerat quisquam accusantium provident molestias?</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square fa-beat"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <img src="images/work-3.png" alt="">
+                        <div class="layer">
+                            <h5>FrontEnd dev</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi id atque in tempora excepturi eaque quaerat quisquam accusantium provident molestias?</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square fa-beat"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>Let's work Together</h4>
+            <p>If you have any questions or would like to get in touch, please use the form below. Rest assured, you're on the right track to reaching your goal!</p>
+            <div class="contact-list">
+                <li><i class="fa-sharp fa-solid fa-paper-plane"></i> contact@gmail.com</li>
+                <li><i class="fa-sharp fa-solid fa-phone"></i> 9301935151</li>
+            </div>
+            <div class="contact-icons">
+                <a href="#"><i class="fa-brands fa-facebook fa-beat-fade"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter fa-shake"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-beat-fade"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin fa-shake"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Enter Your Name" required>
+                <input type="email" id="email" placeholder="Enter Your Email" required>
+                <input type="text" id="subject" placeholder="Enter Your Subject">
+                <textarea id="message" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+                <input type="submit" value="Submit" class="send">
+            </form>
+        </div>
+    </section>
+
+    <!-- <div class="last-text">
+        <p>Developed with love by Abdullah Hassan @ 2024</p>
+    </div>
+    <a href="#" class="top"><i class="fa-solid fa-arrow-up fa-beat-fade"></i></a> -->
+    <div id="loader" class="loader" style="display: none;"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('menu-icon').onclick = function() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.style.display === 'flex') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>
