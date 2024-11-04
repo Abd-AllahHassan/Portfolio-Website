@@ -147,13 +147,13 @@
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script type="text/javascript">
             (function() {
-                emailjs.init('secret'); 
+                emailjs.init('nITb5p4Viz-8-beYe'); 
             })();
         </script>
     </head>
 <body>
     <header class="header">
-    <a href="#" class="logo">Portfolio</a>
+    <a href="#" class="logo">MrCode</a>
     <nav class="navbar" id="navbar">
         <a href="#home" style="--i:1">Home</a>
         <a href="#about" style="--i:2">About</a>
@@ -168,7 +168,7 @@
 </header>
     
 
-    <section class="home" id="home">
+    <section class="home" id="home" data-animate>
         <div class="home-content">
             <h3>Hello, It's Me </h3>
             <h1>Abdullah Hassan.</h1>
@@ -181,47 +181,50 @@
                 <a href="#" style="--i:8"><i class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
                 <a href="#" style="--i:9"><i class="fa-brands fa-twitter fa-beat-fade"></i></a>
             </div>
-            <a href="#" class="btn">More About Me</a>
+            <a href="MyCv.pdf" class="btn" download="Abdullah_Hassan_Resume.pdf">Resume</a>
         </div>
         <div class="home-img">
             <img src="images/user.png" alt="">
         </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about" id="about" data-animate>
         <div class="about-img">
             <img src="images/user.png" alt="">
         </div>
         <div class="about-text">
             <h2>About <span>Me</span></h2>
             <h4>Full Stack Developer</h4>
-            <p>Hello! I'm Abdullah, a passionate web developer with expertise in HTML, CSS, JavaScript, and the MERN stack. I enjoy creating dynamic and responsive web applications that provide a seamless user experience.</p>
-            <p>With a strong background in front-end and back-end development, I have worked on various projects, ranging from small personal websites to large-scale applications. My goal is to constantly improve my skills and stay updated with the latest technologies in the web development world.</p>
-            <p>When I'm not coding, I enjoy exploring new programming languages, contributing to open-source projects, and sharing my knowledge through my platform for lessons. I'm always excited to take on new challenges and collaborate with others to build innovative solutions.</p>
-            <a href="#" class="btn">More About Me</a>
+            <p class="intro-text">Hello! I'm Abdullah, a passionate web developer with expertise in HTML, CSS, JavaScript, and the MERN stack. I enjoy creating dynamic and responsive web applications that provide a seamless user experience.</p>
+            <div class="extra-text">
+                <p>With a strong background in front-end and back-end development, I have worked on various projects, ranging from small personal websites to large-scale applications. My goal is to constantly improve my skills and stay updated with the latest technologies in the web development world.</p>
+                <p>When I'm not coding, I enjoy exploring new programming languages, contributing to open-source projects, and sharing my knowledge through my platform for lessons. I'm always excited to take on new challenges and collaborate with others to build innovative solutions.</p>
+            </div>
+            <button class="btn toggle-btn" onclick="toggleAboutText()">More About Me</button>
         </div>
     </section>
     
-    <section>
+    
+    <section data-animate>
         <div class="services" id="services">
             <div class="container">
                 <h1 class="sub-title">My <span>Services</span></h1>
                 <div class="services-list">
-                    <div>
+                    <div class="serviceCard">
                         <i class="fa-solid fa-code fa-beat" style="color: #00eeff;"></i>
                         <h2>FrontEnd dev</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora nam magni autem eos! Mollitia, possimus commodi dolor exercitationem sapiente placeat fuga pariatur eligendi harum!</p>
                         <a href="#" class="read">Read More</a>
                     </div>
-                    <div>
+                    <div class="serviceCard">
                         <i class="fa-solid fa-crop-simple fa-beat" style="color: #00eeff;"></i>
-                        <h2>FrontEnd dev</h2>
+                        <h2>BackEnd dev</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora nam magni autem eos! Mollitia, possimus commodi dolor exercitationem sapiente placeat fuga pariatur eligendi harum!</p>
                         <a href="#" class="read">Read More</a>
                     </div>
-                    <div>
+                    <div class="serviceCard">
                         <i class="fa-brands fa-app-store fa-beat" style="color: #00eeff;"></i>
-                        <h2>FrontEnd dev</h2>
+                        <h2>FullStack dev</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio tempora nam magni autem eos! Mollitia, possimus commodi dolor exercitationem sapiente placeat fuga pariatur eligendi harum!</p>
                         <a href="#" class="read">Read More</a>
                     </div>
@@ -231,7 +234,7 @@
     </section>
 
     <h1 class="sub-title">My <span>Skills</span></h1>
-    <section class="skils-sec">
+    <section class="skils-sec" data-animate>
         <div class="container1" id="skills">
             <h1 class="heading1">Technical Skills</h1>
             <div class="Technical-bars">
@@ -287,7 +290,7 @@
                     <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                 </svg>
                 <div class="percentage">90%</div>
-                <div class="test">Creativity</div>
+                <div class="test">Creativity :</div>
             </div>
             <div class="radial-bar">
                 <svg x="0px" y="0px" viewBox="0 0 200 200">
@@ -295,7 +298,7 @@
                     <circle class="path path-2" cx="100" cy="100" r="80"></circle>
                 </svg>
                 <div class="percentage">65%</div>
-                <div class="test">Communication</div>
+                <div class="test">Communication :</div>
             </div>
             <div class="radial-bar">
                 <svg x="0px" y="0px" viewBox="0 0 200 200">
@@ -303,7 +306,7 @@
                     <circle class="path path-3" cx="100" cy="100" r="80"></circle>
                 </svg>
                 <div class="percentage">75%</div>
-                <div class="test">Problem Solving</div>
+                <div class="test">Problem Solving :</div>
             </div>
             <div class="radial-bar">
                 <svg x="0px" y="0px" viewBox="0 0 200 200">
@@ -311,7 +314,7 @@
                     <circle class="path path-4" cx="100" cy="100" r="80"></circle>
                 </svg>
                 <div class="percentage">80%</div>
-                <div class="test">Teamwork</div>
+                <div class="test">Teamwork :</div>
             </div>
             </div>
         </div>
@@ -352,7 +355,7 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-animate>
         <div class="contact-text">
             <h2>Contact <span>Me</span></h2>
             <h4>Let's work Together</h4>

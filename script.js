@@ -1,5 +1,5 @@
 var typed = new Typed(".text", {
-    strings: ["Frontend Dev . . ." , "Programmer . . ." , "Web Dev . . ."],
+    strings: ["Frontend Dev . . ." , "Backend Dev . . ." , "Web Dev . . ."],
     typeSpeed: 70,
     backSpeed: 50,
     backDelay: 1000,
@@ -22,7 +22,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     document.getElementById('loader').style.display = 'block';
 
     // Send email using EmailJS
-    emailjs.send('secret', 'secret  ', {
+    emailjs.send('service_d6n5cuh', 'template_hrst80f', {
         from_name: document.getElementById('name').value,
         from_email: document.getElementById('email').value,
         subject: document.getElementById('subject').value,
@@ -56,3 +56,35 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     changeNavActive();
     window.addEventListener('scroll', changeNavActive);
 });
+
+function toggleAboutText() {
+    const extraText = document.querySelector('.extra-text');
+    const toggleButton = document.querySelector('.toggle-btn');
+    
+    if (extraText.style.display === 'none' || !extraText.style.display) {
+        extraText.style.display = 'block';
+        toggleButton.textContent = 'Less About Me';
+    } else {
+        extraText.style.display = 'none';
+        toggleButton.textContent = 'More About Me';
+    }
+}
+
+
+// Select all sections with the data-animate attribute
+const animatedSections = document.querySelectorAll('[data-animate]');
+
+// Initialize Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Stop observing once animation is triggered
+        }
+    });
+}, {
+    threshold: 0.3 // Trigger when 20% of the element is visible
+});
+
+// Observe each section
+animatedSections.forEach(section => observer.observe(section));
